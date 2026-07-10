@@ -1,10 +1,10 @@
 #Application Server
 [app]
-172.31.37.91
+172.31.37.91 ansible_user=ec2-user
 
 #Dev Server
 [dev]
-172.31.43.188
+172.31.43.188 ansible_user=ec2-user
 
 #All servers
 [multi:children]
