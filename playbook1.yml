@@ -1,0 +1,13 @@
+---
+- name: Test Ansible Connectivity
+  hosts: all
+  gather_facts: true
+
+  tasks:
+    - name: Ping managed node
+      ansible.builtin.ping:
+
+    - name: Show hostname
+      ansible.builtin.debug:
+        var: ansible_hostname
+...
