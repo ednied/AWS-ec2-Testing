@@ -1,0 +1,12 @@
+---
+- name: Create user on all managed nodes
+  hosts: multi
+  become: true
+
+  tasks:
+   -name: Create user ednied
+    ansible.builtin.users:
+     name: ednied
+     shell: /bin/bash
+     state: present
+...
