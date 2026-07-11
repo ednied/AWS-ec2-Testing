@@ -1,13 +1,22 @@
 pipeline {
     agent any
 
-    stages {
+    parameters {
+        choice(
+            name: 'PLAYBOOK',
+            choices: [
+                'playbook1.yml',
+                'user_create.yml'
+            ],
+            description: 'Select the Ansible playbook to run'
+        )
+    }
 
+    stages {
         stage('Run Ansible Playbook') {
             steps {
-                sh 'ansible-playbook new_user.yml'
+                sh "ansible-playbook ${params.PLAYBOOK}"
             }
         }
-
     }
 }
