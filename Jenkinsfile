@@ -5,7 +5,7 @@ pipeline {
 
         stage('Run Ansible Playbook') {
             steps {
-                sh 'ansible-playbook user_create.yml'
+                sh 'ansible-playbook new_user.yml'
             }
         }
 
