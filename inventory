@@ -1,10 +1,10 @@
 #Application Server
 [app]
-172.31.37.91 ansible_user=ec2-user
+172.31.37.91
 
 #Dev Server
 [dev]
-172.31.43.188 ansible_user=ec2-user
+172.31.43.188
 
 #All servers
 [multi:children]
@@ -15,5 +15,7 @@ dev
 [multi:vars]
 ansible_ping=all=hosts=pingall
 ansible_create_user=usrcreate
-
 ansible_python_interpreter=/usr/bin/python3.9
+ansible_user=ec2-user
+
+
