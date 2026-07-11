@@ -6,7 +6,7 @@ pipeline {
             name: 'PLAYBOOK',
             choices: [
                 'playbook1.yml',
-                'user_create.yml'
+                'new_user.yml'
             ],
             description: 'Select the Ansible playbook to run'
         )
